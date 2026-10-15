@@ -1,6 +1,6 @@
-# hex-truncated-series-mathlib (Mathlib correspondence for truncated series)
+# hex-truncated-series-theory (Mathlib correspondence for truncated series)
 
-`hex-truncated-series-mathlib` is the Mathlib companion to
+`hex-truncated-series-theory` is the theory companion to
 [hex-truncated-series](../../HexTruncatedSeries/SPEC/hex-truncated-series.md).
 The core library owns the fixed-length coefficient representation and every
 executable operation. This layer equips that representation with Mathlib's
@@ -198,9 +198,9 @@ and its SymPy fixture oracle under the computational owner.
 ## File organization
 
 ```text
-HexTruncatedSeriesMathlib/
+HexTruncatedSeriesTheory/
   Basic.lean   -- CommRing, truncation hom, kernel, quotient equivalence
   Ops.lean     -- ring, precision, and derivative correspondence
   Newton.lean  -- inverse, square root, exp/log, substitution, reversion
-HexTruncatedSeriesMathlib.lean
+HexTruncatedSeriesTheory.lean
 ```

@@ -24,7 +24,7 @@ surjective ring homomorphism from `PowerSeries R`, computes its kernel as
 precision-indexed natural inverses available in every rational algebra.
 -/
 
-namespace HexTruncatedSeriesMathlib
+namespace HexTruncatedSeriesTheory
 
 open Hex
 
@@ -68,16 +68,16 @@ instance commRing [CommRing R] : CommRing (TSeries R n) :=
     npow_succ := fun k a => Hex.TSeries.pow_succ' a k
     natCast := (Hex.TSeries.instNatCast (R := R) (n := n)).natCast
     natCast_zero := by rfl
-    natCast_succ := HexTruncatedSeriesMathlib.natCast_succ
+    natCast_succ := HexTruncatedSeriesTheory.natCast_succ
     nsmul := (Hex.TSeries.instNSMul (R := R) (n := n)).smul
-    nsmul_zero := HexTruncatedSeriesMathlib.nsmul_zero
-    nsmul_succ := HexTruncatedSeriesMathlib.nsmul_succ
+    nsmul_zero := HexTruncatedSeriesTheory.nsmul_zero
+    nsmul_succ := HexTruncatedSeriesTheory.nsmul_succ
     intCast := (Hex.TSeries.instIntCast (R := R) (n := n)).intCast
     intCast_ofNat := by intro k; rfl
     intCast_negSucc := by intro k; rfl
     zsmul := (Hex.TSeries.instZSMul (R := R) (n := n)).smul
-    zsmul_zero' := HexTruncatedSeriesMathlib.nsmul_zero
-    zsmul_succ' := HexTruncatedSeriesMathlib.nsmul_succ
+    zsmul_zero' := HexTruncatedSeriesTheory.nsmul_zero
+    zsmul_succ' := HexTruncatedSeriesTheory.nsmul_succ
     zsmul_neg' := by intro k a; rfl
     sub := fun a b => Hex.TSeries.sub a b
     neg := fun a => Hex.TSeries.neg a
@@ -231,4 +231,4 @@ instance (priority := 800) natInversesOfAlgebra [CommRing R] [Algebra ℚ R]
     rw [show (k : R) = algebraMap ℚ R (k : ℚ) by simp, ← map_mul,
       Rat.mul_inv_cancel _ (by simp; omega), map_one]
 
-end HexTruncatedSeriesMathlib
+end HexTruncatedSeriesTheory

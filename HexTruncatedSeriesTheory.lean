@@ -6,7 +6,7 @@ Authors: Kim Morrison
 
 module
 
-public import HexTruncatedSeriesMathlib.Newton
+public import HexTruncatedSeriesTheory.Newton
 
 public section
 

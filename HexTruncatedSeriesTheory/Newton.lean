@@ -6,7 +6,7 @@ Authors: Kim Morrison
 
 module
 
-public import HexTruncatedSeriesMathlib.Ops
+public import HexTruncatedSeriesTheory.Ops
 public import Mathlib.RingTheory.PowerSeries.Exp
 public import Mathlib.RingTheory.PowerSeries.Inverse
 public import Mathlib.RingTheory.PowerSeries.Log
@@ -21,7 +21,7 @@ series operations.
 
 noncomputable section
 
-namespace HexTruncatedSeriesMathlib
+namespace HexTruncatedSeriesTheory
 
 open Hex Hex.TSeries
 open scoped BigOperators
@@ -511,4 +511,4 @@ theorem exists_unique_sq [CommRing R] (f : PowerSeries R) (r : R)
     coeff_ofPowerSeries s k (by omega)] at hc
   exact hc
 
-end HexTruncatedSeriesMathlib
+end HexTruncatedSeriesTheory

@@ -6,7 +6,7 @@ Authors: Kim Morrison
 
 module
 
-public import HexTruncatedSeriesMathlib.Basic
+public import HexTruncatedSeriesTheory.Basic
 public import Mathlib.RingTheory.PowerSeries.Derivative
 
 public section
@@ -19,7 +19,7 @@ addition, and multiplication correspondences.  This module records the
 precision and derivative interfaces used by the Newton correspondences.
 -/
 
-namespace HexTruncatedSeriesMathlib
+namespace HexTruncatedSeriesTheory
 
 open Hex Hex.TSeries
 
@@ -132,4 +132,4 @@ theorem deriv_ofPowerSeries [CommRing R] (f : PowerSeries R) :
   rw [coeff_ofPowerSeries _ i hi]
   exact coeff_deriv_ofPowerSeries f i hi
 
-end HexTruncatedSeriesMathlib
+end HexTruncatedSeriesTheory

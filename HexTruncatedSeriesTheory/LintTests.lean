@@ -4,7 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kim Morrison
 -/
 
-import HexTruncatedSeriesMathlib
+import HexTruncatedSeriesTheory
 import Batteries.Tactic.Lint
 import Mathlib.Tactic.Linter.Lint
 import Mathlib.Tactic.Linter.Style
@@ -35,4 +35,4 @@ cannot be repaired from this downstream regression module. -/
 
 #lint- docBlameThm' in HexTruncatedSeries
 
-#lint- docBlameThm' in HexTruncatedSeriesMathlib
+#lint- docBlameThm' in HexTruncatedSeriesTheory

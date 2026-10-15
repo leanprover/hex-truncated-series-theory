@@ -1,10 +1,10 @@
-# hex-truncated-series-mathlib
+# hex-truncated-series-theory
 
 Part of [`hex`](https://github.com/kim-em/hex-dev), a computer algebra
 library for Lean 4. The aim is fast executable code, fully verified, built
 with spec-driven development.
 
-`hex-truncated-series-mathlib` is the Mathlib correspondence layer for
+`hex-truncated-series-theory` is the Mathlib correspondence layer for
 [`hex-truncated-series`](https://github.com/leanprover/hex-truncated-series).
 It identifies fixed-precision series with `PowerSeries R` modulo `X ^ n` and
 transports the executable operations. It depends on Mathlib and
@@ -16,15 +16,15 @@ Add to your `lakefile.toml`:
 
 ```toml
 [[require]]
-name = "hex-truncated-series-mathlib"
-git = "https://github.com/leanprover/hex-truncated-series-mathlib.git"
+name = "hex-truncated-series-theory"
+git = "https://github.com/leanprover/hex-truncated-series-theory.git"
 rev = "main"
 ```
 
 ```lean
-import HexTruncatedSeriesMathlib
+import HexTruncatedSeriesTheory
 
-open Hex HexTruncatedSeriesMathlib
+open Hex HexTruncatedSeriesTheory
 
 #check (quotEquiv (R := Rat) (n := 6))
 
